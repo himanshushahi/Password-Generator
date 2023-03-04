@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 90vh;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  background-color: #e2c6a7;
+}
+
+nav {
+  margin: 0;
+  height: 15%;
+  background-color: #e2a35a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.h1 {
+  font-size: 1rem;
+  border: 2px solid white;
+  height: 45px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid white;
+}
+
+#show_password {
+  border: 1px solid black;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  height: 100%;
+}
+
+.maindiv {
+  width: 80%;
+  height: 50%;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#show_password {
+  background-color: white;
+  width: 45%;
+  border-radius: 15px;
+  height: 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: larger;
+  margin-top: 15px;
+  padding: 15px;
+  position: relative;
+}
+
+#button {
+  background-color: #e2a35a;
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.btn {
+  background-color: #e2a35a;
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  transition: background-color 200ms;
+  cursor: pointer;
+}
+
+#button:hover,
+.btn:hover {
+  background-color: #e2c6a7;
+  border: 1px solid white;
+}
+
+#realPassword {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal {
+  width: 200px;
+  position: absolute;
+  top: -20%;
+  left: 42%;
+  transform: translateY(250%);
+  height: 100px;
+  z-index: 9999;
+  background-color: #e2a35a;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: transform 200ms ease-in-out;
+}
+
+.hide {
+  transform: translateY(0%);
+  transition: transform 200ms ease-in;
+}
+
+#generator {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  /*     border: 1px solid black; */
+  height: 50%;
+  align-items: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 22px;
+  background-color: #ddd;
+  outline: none;
+  border-radius: 15px;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #e2a35a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #e2a35a;
+  cursor: pointer;
+}
+
+#valueDisplay {
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+#passlength {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+
+.case {
+  gap: 15px;
+  width: 30%;
+  margin-left: 25px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+.flex-1 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#button {
+  display: none;
+}
+
+footer {
+  background-color: #e2a35a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+}
+
+@media only screen and (max-width: 850px) {
+  #show_password,
+  #generator {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #generator {
+    flex-direction: column;
+  }
+
+  body {
+    height: 75vh;
+  }
+  
+  .maindiv {
+    position: absolute;
+    top: 25%;
+  }
+
+  #passlength {
+    width: 100%;
+  }
+
+  #myRange {
+    width: 95%;
+  }
+
+  .modal {
+    left: 26%;
+  }
+
+  #show_password {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 10px;
+  }
+
+  #button {
+    position: static;
+    min-width: 75px;
+    max-width: 75px;
+    height: 45px;
+  }
+
+  .btn {
+    height: 45px;
+    width: 145px;
+  }
+}

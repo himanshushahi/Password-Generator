@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Password-Generator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <span>
+            <img
+                src="https://images.ctfassets.net/lzny33ho1g45/password-security-p-img/72f3ab78724796a0990219ee8ed495c7/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760">
+        </span>
+        <span class="h1">
+            <h1>Password Generator</h1>
+        </span>
+    </nav>
+
+    <div class="container flex">
+        <div class="maindiv">
+            <div id="show_password">
+                <div id="realPassword"></div><button onclick="myFunction()" title="Copy-text" id="button">Copy
+                    text</button>
+            </div>
+            <div id="generator">
+
+                <div id="passlength">
+                    <input type="range" min="8" max="25" value="8" id="myRange">
+                    <lable for="myRange" style="margin-right:10px;">Length</lable>
+                    <span id="valueDisplay">8</span>
+                </div>
+
+                <div class="case flex">
+                    <div class="flex-1">
+                        <label for="uppercase">Uppercase</label>
+                        <input type="checkbox" id="uppercase">
+                    </div>
+                    <div class="flex-1">
+                        <label for="lowecase">Lowercase</label>
+                        <input type="checkbox" id="lowercase">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn" id="submit" value="Generate">
+        </div>
+    </div>
+    <div class="modal hide"></div>
+    <footer>
+        &copy;Copyright By Himanshu Kumar Shahi
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
